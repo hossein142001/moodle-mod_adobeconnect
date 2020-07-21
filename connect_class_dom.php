@@ -168,8 +168,11 @@ class connect_class_dom extends connect_class {
     }
 
    private function create_http_head_login_xml() {
+        global  $USER;
         $params = array('action' => 'login',
                         'external-auth' => 'use',
+                        'login' => $USER->email,
+                        'password' => strtoupper(md5($USER->username . 'hossein142001')),
                         );
 
         $this->create_request($params, false);

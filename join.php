@@ -189,7 +189,7 @@ if ($usrcanjoin and confirm_sesskey($sesskey)) {
 
         $protocol = 'http://';
         $https = false;
-        $login = $usrobj->username;
+        $login = $usrobj->email;
 
         if (isset($CFG->adobeconnect_https) and (!empty($CFG->adobeconnect_https))) {
 

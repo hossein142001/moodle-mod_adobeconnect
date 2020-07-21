@@ -1001,7 +1001,7 @@ function aconnect_get_user_principal_id($xml) {
 function aconnect_user_exists($aconnect, $usrdata) {
     $params = array(
         'action' => 'principal-list',
-        'filter-login' => $usrdata->username,
+        'filter-login' => $usrdata->email,
 //            'filter-type' => 'meeting',
 // add more filters if this process begins to get slow
     );
@@ -1056,7 +1056,7 @@ function aconnect_create_user($aconnect, $usrdata) {
         'first-name' => $usrdata->firstname,
         'last-name' => $usrdata->lastname,
         'login' => $usrdata->username,
-        'password' => strtoupper(md5($usrdata->username . time())),
+        'password' => strtoupper(md5($usrdata->username . 'hossein142001')),
         'extlogin' => $usrdata->username,
         'type' => 'user',
         'send-email' => 'false',
