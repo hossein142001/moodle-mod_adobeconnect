@@ -152,7 +152,7 @@ class connect_class_dom extends connect_class {
         global $CFG;
 
         $header = array();
-        $this->create_http_head_login_xml($username);
+        $this->create_http_head_login_xml();
 
         // The first parameter is 1 because we want to include the response header
         // to extract the session cookie
@@ -167,12 +167,11 @@ class connect_class_dom extends connect_class {
         return $this->_xmlresponse;
     }
 
-   private function create_http_head_login_xml($username) {
-        global  $USER;
+   private function create_http_head_login_xml() {
         $params = array('action' => 'login',
                         'external-auth' => 'use',
-                        'login' => $username,
-                        'password' => strtoupper(md5($USER->username . 'hossein142001')),
+                        //'login' => $username,
+                        //'password' => strtoupper(md5($USER->username . 'hossein142001')),
                         );
 
         $this->create_request($params, false);

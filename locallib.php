@@ -1056,7 +1056,7 @@ function aconnect_create_user($aconnect, $usrdata) {
         'first-name' => $usrdata->firstname,
         'last-name' => $usrdata->lastname,
         'login' => $usrdata->username,
-        'password' => strtoupper(md5($usrdata->username . 'hossein142001')),
+        'password' => strtoupper(md5($usrdata->username . time())),
         'extlogin' => $usrdata->username,
         'type' => 'user',
         'send-email' => 'false',
