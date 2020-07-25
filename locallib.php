@@ -1001,7 +1001,7 @@ function aconnect_get_user_principal_id($xml) {
 function aconnect_user_exists($aconnect, $usrdata) {
     $params = array(
         'action' => 'principal-list',
-        'filter-login' => $usrdata->email,
+        'filter-login' => $usrdata->username,
 //            'filter-type' => 'meeting',
 // add more filters if this process begins to get slow
     );
