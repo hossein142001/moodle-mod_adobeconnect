@@ -170,3 +170,4 @@ $string['event_assign_role'] = 'User assigned a Connect Pro role';
 $string['event_unassign_role'] = 'User unassigned a Connect Pro role';
 $string['start'] = 'start';
 $string['end'] = 'end';
+$string['duration'] = 'duration(minutes)';

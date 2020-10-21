@@ -260,21 +260,26 @@ class mod_adobeconnect_renderer extends plugin_renderer_base
                     '#',
                     get_string('name'),
                     get_string('start', 'adobeconnect'),
-                    get_string('end', 'adobeconnect')
+                    get_string('end', 'adobeconnect'),
+                    get_string('duration', 'adobeconnect'),
                 );
                 foreach ($recordinggrp as $recording_scoid => $recording) {
                     if ($recording->sourcesco != $sourcescoid) {
                         continue;
                     }
                     $c++;
-                    
+
                     $html .= html_writer::start_tag('tr');
                     $url = 'joinrecording.php?id=' . $cmid . '&recording=' . $recording_scoid .
                         '&groupid=' . $groupid . '&sesskey=' . $USER->sesskey;
                     $param = array('target' => '_blank');
                     $name = html_entity_decode($recording->name);
                     $link = html_writer::link($url, format_string($name), $param);
-                    $table->data[] = array($c, $link, userdate($recording->startdate), userdate($recording->enddate));
+                    $table->data[] = array($c,
+                        $link,
+                        userdate($recording->startdate),
+                        userdate($recording->enddate) ,
+                        $recording->duration);
                 }
             }
         }
