@@ -214,7 +214,7 @@ if ($ADMIN->fulltree) {
 
     $param = new stdClass();
     $param->image = $CFG->wwwroot.'/mod/adobeconnect/pix/rl_logo.png';
-    $param->url = 'https://moodle.org/plugins/view.php?plugin=mod_adobeconnect';
+    $param->url = 'https://github.com/hossein142001/moodle-mod_adobeconnect';
 
     $settings->add(new admin_setting_heading('adobeconnect_intro', '', get_string('settingblurb', 'adobeconnect', $param)));
 }
