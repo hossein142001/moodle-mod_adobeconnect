@@ -635,7 +635,7 @@ function aconnect_get_recordings($aconnect, $folderscoid, $sourcescoid) {
                                 $meetingdetail = $innernodelist->item($x);
 
                                 // Check if the SCO item is a recording or uploaded document.  We only want to display recordings
-                                if (!is_null($meetingdetail->getElementsByTagName('duration')->item(0))) {
+                                if (!is_null($meetingdetail->attributes->getNamedItem('duration')->nodeValue)) {
 
                                     $j = (int) $domnode->nodeValue;
                                     $value = (!is_null($meetingdetail->getElementsByTagName('name'))) ?
