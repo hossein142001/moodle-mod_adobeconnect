@@ -277,8 +277,8 @@ class mod_adobeconnect_renderer extends plugin_renderer_base
                     $link = html_writer::link($url, format_string($name), $param);
                     $table->data[] = array($c,
                         $link,
-                        userdate($recording->startdate),
-                        userdate($recording->enddate) ,
+                        userdate(strtotime($recording->startdate)),
+                        userdate(strtotime($recording->enddate)) ,
                         $recording->duration);
                 }
             }
