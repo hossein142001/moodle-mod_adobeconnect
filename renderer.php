@@ -279,7 +279,8 @@ class mod_adobeconnect_renderer extends plugin_renderer_base
                         $link,
                         userdate(strtotime($recording->startdate)),
                         userdate(strtotime($recording->enddate)),
-                        round($recording->duration / 60));
+                        gmdate("H:i:s", $recording->duration )
+                    );
                 }
             }
         }
