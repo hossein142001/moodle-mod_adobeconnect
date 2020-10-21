@@ -278,8 +278,8 @@ class mod_adobeconnect_renderer extends plugin_renderer_base
                     $table->data[] = array($c,
                         $link,
                         userdate(strtotime($recording->startdate)),
-                        userdate(strtotime($recording->enddate)) ,
-                        $recording->duration);
+                        userdate(strtotime($recording->enddate)),
+                        round($recording->duration / 60));
                 }
             }
         }
