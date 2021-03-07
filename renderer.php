@@ -33,7 +33,8 @@ class mod_adobeconnect_renderer extends plugin_renderer_base
     public function display_meeting_detail($meetingdetail, $cmid, $groupid = 0)
     {
         global $CFG;
-
+		
+		$context = context_module::instance($cmid);
         $target = new moodle_url('/mod/adobeconnect/view.php');
 
         $attributes = array('method' => 'POST', 'target' => $target);
@@ -208,7 +209,21 @@ class mod_adobeconnect_renderer extends plugin_renderer_base
         );
         $html .= html_writer::empty_tag('input', $param);
         $html .= html_writer::end_tag('div');
-
+		
+		if(has_capability('mod/adobeconnect:view_rollcall', $context)){
+			$param = array('class' => 'aconbtnrollcall');
+			$html .= html_writer::start_tag('div', $param);
+			$param = array('id' => $cmid, 'sesskey' => sesskey());
+			$target = new moodle_url('/mod/adobeconnect/rollcall.php', $param);
+			$param = array('type' => 'button',
+				'value' => get_string('rollcall', 'adobeconnect'),
+				'name' => 'rollcall',
+				'onclick' => 'window.open(\'' . $target->out(false) . '\', \'btnname\',
+													 \'menubar=0,location=0,scrollbars=0,resizable=0,width=900,height=900\', 0);',
+			);
+			$html .= html_writer::empty_tag('input', $param);
+			$html .= html_writer::end_tag('div');
+		}
         $html .= html_writer::end_tag('div');
 
 

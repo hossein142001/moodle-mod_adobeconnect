@@ -78,6 +78,7 @@ $string['invalidadobemeeturl'] = 'Invalid entry for this field.  Click the help 
 $string['adobeconnect:meetingpresenter'] = 'Meeting Presenter';
 $string['adobeconnect:meetingparticipant'] = 'Meeting Particpant';
 $string['adobeconnect:meetinghost'] = 'Meeting Host';
+$string['adobeconnect:view_rollcall'] = 'view rollcall';
 $string['public'] = 'Public';
 $string['private'] = 'Private';
 
@@ -170,4 +171,5 @@ $string['event_assign_role'] = 'User assigned a Connect Pro role';
 $string['event_unassign_role'] = 'User unassigned a Connect Pro role';
 $string['start'] = 'start';
 $string['end'] = 'end';
+$string['rollcall'] = 'rollcall';
 $string['duration'] = 'duration';

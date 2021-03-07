@@ -50,6 +50,14 @@ $capabilities = array(
             'manager' => CAP_ALLOW
         )
     ),
+	
+    'mod/adobeconnect:view_rollcall' => array(
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_MODULE,
+        'archetypes' => array(
+            'manager' => CAP_ALLOW
+        )
+    ),
 
     'mod/adobeconnect:meetinghost' => array(
 
