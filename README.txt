@@ -35,6 +35,7 @@ Once that is complete you can begin to create and administer meetings.
 
 
 Maintainer Contact information
-Company: Remote Learner
-Author: Akinsaya Delamarre
-Email: adelamarre@remote-learner.net
+Company: abatech
+Author: hossein abaei
+Email: info@abatech.ir
+Site: http://abatech.ir/
