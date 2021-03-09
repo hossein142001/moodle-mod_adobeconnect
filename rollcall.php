@@ -63,7 +63,7 @@ echo $OUTPUT->header();
 echo $OUTPUT->skip_link_target();
 
 if (!has_capability('mod/adobeconnect:view_rollcall', $context) || !confirm_sesskey($sesskey)) {
-	//return "";
+	print_error('confirmsesskeybad','error');
 }
 echo html_writer::start_tag('div', ['class'=>'course_category_tree clearfix category-browse category-browse-0']);
 
